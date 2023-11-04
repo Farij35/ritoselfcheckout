@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "17306734556",
+    "project_id": "ritoselfcheckout-3aead",
+    "storage_bucket": "ritoselfcheckout-3aead.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:17306734556:android:a5ca120659c73844f6c919",
+        "android_client_info": {
+          "package_name": "com.ritoselfcheckout.ritoselfcheckout"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpsxFnMWct6OIoXazDtT9w51Be6WPyeLI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
