@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ritoselfcheckout/data/datasources/remote/firestore_add_data.dart';
 import 'package:ritoselfcheckout/presentation/controllers/text_field_controller.dart';
 import 'package:ritoselfcheckout/presentation/widgets/build_appbar.dart';
 import '../../widgets/build_button.dart';
@@ -23,7 +24,15 @@ class AdminInputItem extends StatelessWidget {
             buildSizedBox(20, 0),
             buildTextField(context, 4, NewItemInputController.itemPriceController, 'Harga Barang', false),
             buildSizedBox(20, 0),
-            buildButton('Input', const Color(0xFF014A7E), () {} ),
+            buildButton('Input', const Color(0xFF014A7E), () {
+              addData('items_data', NewItemInputController.barcodeController.text, itemsData);
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Barang berhasil ditambahkan'),
+                ),
+              );
+              clearInputItemControllers();
+            }),
           ],
         ),
       ),

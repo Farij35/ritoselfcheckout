@@ -52,3 +52,15 @@ void clearLoginControllers() {
   }
 }
 
+void clearInputItemControllers() {
+  List<TextEditingController> controllers = [
+    NewItemInputController.barcodeController,
+    NewItemInputController.itemNameController,
+    NewItemInputController.itemPriceController,
+  ];
+
+  for (TextEditingController controller in controllers) {
+    controller.clear();
+  }
+}
+
