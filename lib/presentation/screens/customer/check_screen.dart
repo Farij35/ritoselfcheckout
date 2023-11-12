@@ -20,7 +20,7 @@ class CheckScreen extends StatelessWidget {
           children: [
             buildTextField(context, 2, BarcodeController.barcodeController, "Kode Barcode", false),
             buildSizedBox(20, 0),
-            bigCardWidget(context, 2),
+            bigCardWidget(context, "Nama Barang", "Rp. 999.999", "0", "barcode", 2),
             buildSizedBox(20, 0),
             buildButton("Hapus", Colors.red, () { })
           ],

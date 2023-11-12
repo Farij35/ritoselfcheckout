@@ -29,7 +29,7 @@ class ScanScreen extends StatelessWidget {
                   children: [
                     buildTextField(context, 2, BarcodeController.barcodeController, "Kode Barcode", false),
                     buildSizedBox(20, 0),
-                    bigCardWidget(context, 2),
+                    bigCardWidget(context, "Nama Barang", "Harga Barang", "qty", "barcode", 2),
                   ],
                 ),
               ),

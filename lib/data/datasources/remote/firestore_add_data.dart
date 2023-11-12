@@ -7,7 +7,7 @@ final itemsData = <String, dynamic> {
   "barcode": NewItemInputController.barcodeController.text,
   "nama_barang": NewItemInputController.itemNameController.text,
   "harga_barang": itemPrice,
-  "qty": 0
+  "qty": 1
 };
 
 Future<void> addData(String collection, String docId, Map<String, dynamic> data) async {
