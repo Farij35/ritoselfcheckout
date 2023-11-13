@@ -46,7 +46,7 @@ class ScanScreen extends StatelessWidget {
                     child: ListView.builder(
                       itemCount: 10,
                       itemBuilder: (BuildContext context, int index) {
-                        return cardWidget(context);
+                        return cardWidget(context, "Nama Barang", "999.999", "99", "Barcode");
                       },
                     ),
                   ),

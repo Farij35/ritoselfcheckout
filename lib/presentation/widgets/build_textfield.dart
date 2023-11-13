@@ -19,3 +19,17 @@ Widget buildTextField(context, int scrwidth, TextEditingController controller, S
     ),
   );
 }
+
+
+// child: TextField(
+//   onChanged: widget.onChanged,
+//   decoration: const InputDecoration(
+//     border: OutlineInputBorder(),
+//     labelText: "Scan atau Masukkan Barcode",
+//     labelStyle: TextStyle(
+//       fontFamily: "BalooChettan2",
+//     ),
+//     filled: true,
+//     fillColor: Colors.white,
+//   ),
+// ),
