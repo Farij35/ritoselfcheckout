@@ -1,37 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:ritoselfcheckout/presentation/controllers/text_field_controller.dart';
+import 'package:ritoselfcheckout/data/datasources/remote/firestore_store_transaction.dart';
 import 'package:ritoselfcheckout/presentation/screens/customer/review_screen.dart';
-import 'package:ritoselfcheckout/presentation/widgets/build_appbar.dart';
-import 'package:ritoselfcheckout/presentation/widgets/build_textfield.dart';
+import 'package:ritoselfcheckout/presentation/widgets/build_textfield_scan.dart';
 import 'package:ritoselfcheckout/presentation/widgets/icon_widget.dart';
 import 'package:ritoselfcheckout/presentation/widgets/text_widget.dart';
-import '../../widgets/big_item_card_widget.dart';
-import '../../widgets/build_sizedbox.dart';
-import '../../widgets/item_card_widget.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_appbar_scan.dart';
 
 class ScanScreen extends StatelessWidget {
   const ScanScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
-      appBar: buildAppBar("Scan Atau Masukkan Kode Barcode", true),
+      appBar: appBarScan(context, "Scan atau Masukkan Barcode", true),
       body: Row(
         children: [
-          // Bagian Pertama (Setengah Layar)
           Expanded(
             flex: 3,
             child: Container(
               color: const Color(0xFF9DBBD0),
-              child: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    buildTextField(context, 2, BarcodeController.barcodeController, "Kode Barcode", false),
-                    buildSizedBox(20, 0),
-                    bigCardWidget(context, "Nama Barang", "Harga Barang", "qty", "barcode", 2),
-                  ],
-                ),
+              child: const  Center(
+                child: BuildTextFieldScan(),
               ),
             ),
           ),
@@ -43,12 +33,7 @@ class ScanScreen extends StatelessWidget {
                   flex: 4,
                   child: Container(
                     color: const Color(0xFF014A7E),
-                    child: ListView.builder(
-                      itemCount: 10,
-                      itemBuilder: (BuildContext context, int index) {
-                        return cardWidget(context, "Nama Barang", "999.999", "99", "Barcode");
-                      },
-                    ),
+                    child: const GetTransactionItems(),
                   ),
                 ),
                 Expanded(

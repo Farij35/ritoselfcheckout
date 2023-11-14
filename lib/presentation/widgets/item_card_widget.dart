@@ -25,7 +25,7 @@ Widget cardWidget(context, String name, String price, String qty, String barcode
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
               buildText2('Qty : $qty'),
-              buildSizedBox(20, 0),
+              buildSizedBox(0, 20),
               buildText2(barcode)
             ],
           ),

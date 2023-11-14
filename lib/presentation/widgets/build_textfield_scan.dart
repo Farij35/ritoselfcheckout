@@ -15,6 +15,7 @@ class _BuildTextFieldScanState extends State<BuildTextFieldScan> {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         SizedBox(
           width: screenWidth / 2,
