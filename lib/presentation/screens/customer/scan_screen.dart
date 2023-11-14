@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:ritoselfcheckout/data/datasources/remote/firestore_store_transaction.dart';
 import 'package:ritoselfcheckout/presentation/screens/customer/review_screen.dart';
@@ -11,7 +12,6 @@ class ScanScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: appBarScan(context, "Scan atau Masukkan Barcode", true),
       body: Row(
@@ -50,7 +50,27 @@ class ScanScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
-                            buildText('Rp. 999.999', 28, Colors.white),
+                            StreamBuilder<QuerySnapshot>(
+                              stream: FirebaseFirestore.instance.collection('transaction_occuring').snapshots(),
+                              builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+                                if (snapshot.hasError) {
+                                  return const Text('Something went wrong');
+                                }
+
+                                if (snapshot.connectionState == ConnectionState.waiting) {
+                                  return const Text("Loading");
+                                }
+
+                                int totalSum = 0;
+
+                                for (var doc in snapshot.data!.docs) {
+                                  String numberField = (doc.data() as Map<String, dynamic>)["harga_barang"].toString();
+                                  totalSum += int.parse(numberField);
+                                }
+
+                                return buildText("Rp. ${totalSum.toString()}", 28, Colors.white);
+                              }
+                            ),
                             buildIcon(Icons.arrow_forward_rounded, Colors.white, 50),
                           ],
                         ),

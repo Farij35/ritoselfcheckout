@@ -9,43 +9,34 @@ String time = DateFormat("HH:mm:ss").format(DateTime.now());
 
 Future<void> storeTransaction(String barcode, Map<String, dynamic> data) async {
   SharedPreferences prefs = await SharedPreferences.getInstance();
-
   await prefs.setString('date', date);
   await prefs.setString('time', time);
-
   var docRef = FirebaseFirestore.instance
       .collection('transaction_occuring')
-      .doc(date)
-      .collection(time)
       .doc(barcode);
-
   var doc = await docRef.get();
-
   if (doc.exists) {
-    // Jika dokumen sudah ada, tambahkan qty
     docRef.update({'qty': FieldValue.increment(1)});
+    var hargaBarang = doc.data()?['harga_barang'];
+    docRef.update({'harga_barang': hargaBarang * 2});
   } else {
-    // Jika dokumen belum ada, buat dokumen baru dengan qty = 1
     docRef.set({...data, 'qty': 1});
   }
 }
 
 class GetTransactionItems extends StatelessWidget {
   const GetTransactionItems({super.key});
-
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<QuerySnapshot>(
-      stream: FirebaseFirestore.instance.collection('transaction_occuring').doc(date).collection(time).snapshots(),
+      stream: FirebaseFirestore.instance.collection('transaction_occuring').snapshots(),
       builder: (context, snapshot) {
         if (snapshot.hasError) {
           return const Text('Something went wrong');
         }
-
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const CircularProgressIndicator();
         }
-
         return SizedBox(
           height: 200,
           child: ListView.builder(
