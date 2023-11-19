@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../widgets/build_row_main.dart';
+import '../../widgets/widget_row_main.dart';
 import '../admin/admin_login.dart';
 
 class MainScreen extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:ritoselfcheckout/presentation/widgets/item_card_widget.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_item_card.dart';
 
 class SearchData extends StatelessWidget {
   final String searchItem;
@@ -33,7 +33,3 @@ class SearchData extends StatelessWidget {
     );
   }
 }
-
-
-
-

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ritoselfcheckout/presentation/controllers/text_field_controller.dart';
-import 'package:ritoselfcheckout/presentation/widgets/items_data_widget.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_items_data.dart';
 
 class BuildTextFieldScan extends StatefulWidget {
   const BuildTextFieldScan({super.key});

@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:ritoselfcheckout/presentation/widgets/build_appbar.dart';
-import 'package:ritoselfcheckout/presentation/widgets/icon_widget.dart';
-import 'package:ritoselfcheckout/presentation/widgets/text_widget.dart';
-import '../../widgets/build_row.dart';
-import '../../widgets/item_card_widget.dart';
+import 'package:ritoselfcheckout/data/datasources/remote/firestore_store_transaction.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_appbar.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_icon.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_text.dart';
+import '../../widgets/widget_row.dart';
+import '../../widgets/widget_item_card.dart';
 
 class ReviewScreen extends StatelessWidget {
-  const ReviewScreen({super.key});
+  final int totalPrice;
+  final int totalQty;
+  const ReviewScreen({super.key, required this.totalPrice, required this.totalQty});
 
   @override
   Widget build(BuildContext context) {
@@ -21,21 +24,15 @@ class ReviewScreen extends StatelessWidget {
               onTap: () {},
               child: Container(
                 color: const Color(0xFF014A7E),
-                child: RawScrollbar(
-                  thumbColor: const Color(0xFF002947),
+                child: const RawScrollbar(
+                  thumbColor: Color(0xFF002947),
                   thickness: 10,
                   thumbVisibility: true,
-                  child: ListView.builder(
-                    itemCount: 10,
-                    itemBuilder: (BuildContext context, int index) {
-                      return cardWidget(context, "Nama Barang", "999.999", "99", "Barcode");
-                    },
-                  ),
+                  child: GetTransactionItems()
                 ),
               ),
             ),
           ),
-          // Bagian Kedua (Setengah Layar)
           Expanded(
             flex: 3,
             child: Column(
@@ -47,12 +44,12 @@ class ReviewScreen extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(40.0),
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start, // Menengahkan column vertikal
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: <Widget>[
                           Column(
                             children: [
-                              buildRow("Jumlah Barang", "10"),
-                              buildRow("Total Harga", "Rp. 999.999"),
+                              buildRow("Jumlah Barang", totalQty.toString()),
+                              buildRow("Total Harga", totalPrice.toString()),
                               buildRow("Diskon", "Rp. 0"),
                               const Divider(height: 20, thickness: 5, indent: 0, endIndent: 350, color: Colors.black),
                               buildRow("Total", "Rp. 999.999", isRed: true, fontSize: 50),

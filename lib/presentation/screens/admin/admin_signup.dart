@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:ritoselfcheckout/domain/usecases/signup_usecase.dart';
 import 'package:ritoselfcheckout/presentation/controllers/text_field_controller.dart';
-import 'package:ritoselfcheckout/presentation/widgets/build_appbar.dart';
-import 'package:ritoselfcheckout/presentation/widgets/build_button.dart';
-import 'package:ritoselfcheckout/presentation/widgets/build_sizedbox.dart';
-import 'package:ritoselfcheckout/presentation/widgets/build_textfield.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_appbar.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_button.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_sizedbox.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_textfield.dart';
 
 class AdminSignup extends StatelessWidget {
   const AdminSignup({super.key});

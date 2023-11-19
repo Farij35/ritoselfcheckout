@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ritoselfcheckout/presentation/widgets/build_appbar.dart';
-import 'package:ritoselfcheckout/presentation/widgets/menu_card_widget.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_appbar.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_menu_card.dart';
 
 class TopUpScreen extends StatelessWidget {
   const TopUpScreen({Key? key}) : super(key: key);
@@ -17,7 +17,7 @@ class TopUpScreen extends StatelessWidget {
           crossAxisSpacing: 20,
           mainAxisSpacing: 20,
         ),
-        itemCount: 6, // Jumlah total kartu
+        itemCount: 6,
         itemBuilder: (BuildContext context, int index) {
           List<String> texts = ['10.000', '20.000', '50.000', '100.000', '200.000', '500.000'];
           return Padding(

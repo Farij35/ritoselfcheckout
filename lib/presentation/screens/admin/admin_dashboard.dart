@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ritoselfcheckout/presentation/widgets/build_appbar.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_appbar.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
-import '../../../domain/entities/chart_data.dart';
-import '../../widgets/drawer_widget.dart';
+import 'package:ritoselfcheckout/domain/entities/chart_data.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_drawer.dart';
 
 class AdminDashboard extends StatefulWidget {
   const AdminDashboard({super.key});

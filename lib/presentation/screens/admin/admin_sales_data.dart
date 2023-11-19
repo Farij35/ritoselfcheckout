@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ritoselfcheckout/presentation/widgets/build_appbar.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_appbar.dart';
 
 class AdminSalesData extends StatelessWidget {
   const AdminSalesData({super.key});

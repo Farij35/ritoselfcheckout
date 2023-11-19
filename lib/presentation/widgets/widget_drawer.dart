@@ -4,9 +4,9 @@ import 'package:ritoselfcheckout/presentation/screens/admin/admin_choose_input_i
 import 'package:ritoselfcheckout/presentation/screens/admin/admin_dashboard.dart';
 import 'package:ritoselfcheckout/presentation/screens/admin/admin_item_data.dart';
 import 'package:ritoselfcheckout/presentation/screens/admin/admin_sales_data.dart';
-import 'package:ritoselfcheckout/presentation/widgets/build_user_data.dart';
-import 'package:ritoselfcheckout/presentation/widgets/icon_widget.dart';
-import 'package:ritoselfcheckout/presentation/widgets/text_widget.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_user_data.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_icon.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_text.dart';
 import '../screens/customer/main_screen.dart';
 
 Widget drawerWidget(context) {

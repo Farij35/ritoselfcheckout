@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ritoselfcheckout/presentation/widgets/build_appbar.dart';
-import 'package:ritoselfcheckout/presentation/widgets/build_textfield_scan.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_appbar.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_textfield_scan.dart';
 
 class AdminAddItem extends StatefulWidget {
   const AdminAddItem({super.key});

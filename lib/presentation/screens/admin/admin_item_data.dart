@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ritoselfcheckout/data/datasources/remote/firestore_search_data.dart';
-import 'package:ritoselfcheckout/presentation/widgets/build_appbar.dart';
-import 'package:ritoselfcheckout/presentation/widgets/build_textfield_search.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_appbar.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_textfield_search.dart';
 
 class AdminItemData extends StatefulWidget {
   const AdminItemData({super.key});

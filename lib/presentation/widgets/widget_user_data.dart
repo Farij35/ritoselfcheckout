@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:ritoselfcheckout/presentation/widgets/text_widget.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_text.dart';
 import '../../data/datasources/remote/firestore_data_source.dart';
 
 Widget buildUserData() {

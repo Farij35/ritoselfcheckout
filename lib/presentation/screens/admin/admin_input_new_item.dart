@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:ritoselfcheckout/data/datasources/remote/firestore_add_data.dart';
 import 'package:ritoselfcheckout/presentation/controllers/text_field_controller.dart';
-import 'package:ritoselfcheckout/presentation/widgets/build_appbar.dart';
-import '../../widgets/build_button.dart';
-import '../../widgets/build_sizedbox.dart';
-import '../../widgets/build_textfield.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_appbar.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_button.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_sizedbox.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_textfield.dart';
 
 class AdminInputItem extends StatelessWidget {
   const AdminInputItem({super.key});

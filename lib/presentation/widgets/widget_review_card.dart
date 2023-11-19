@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ritoselfcheckout/presentation/widgets/build_sizedbox.dart';
-import 'package:ritoselfcheckout/presentation/widgets/icon_widget.dart';
-import 'package:ritoselfcheckout/presentation/widgets/text_widget.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_sizedbox.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_icon.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_text.dart';
 
 Widget bigCardWidget(context, String nama, String harga, String qty, String barcode, int scrwidth) {
   double screenWidth = MediaQuery.of(context).size.width;

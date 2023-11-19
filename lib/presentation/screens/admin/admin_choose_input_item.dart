@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ritoselfcheckout/presentation/screens/admin/admin_add_item.dart';
 import 'package:ritoselfcheckout/presentation/screens/admin/admin_input_new_item.dart';
-import 'package:ritoselfcheckout/presentation/widgets/build_appbar.dart';
-import 'package:ritoselfcheckout/presentation/widgets/menu_card_widget.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_appbar.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_menu_card.dart';
 
 class ChooseInputItem extends StatelessWidget {
   const ChooseInputItem({super.key});

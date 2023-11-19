@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ritoselfcheckout/presentation/widgets/build_sizedbox.dart';
-import 'package:ritoselfcheckout/presentation/widgets/icon_widget.dart';
-import 'package:ritoselfcheckout/presentation/widgets/text_widget.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_sizedbox.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_icon.dart';
+import 'package:ritoselfcheckout/presentation/widgets/widget_text.dart';
 import 'package:ritoselfcheckout/presentation/screens/customer/check_screen.dart';
 import 'package:ritoselfcheckout/presentation/screens/customer/scan_screen.dart';
 import 'package:ritoselfcheckout/presentation/screens/customer/topup_screen.dart';
